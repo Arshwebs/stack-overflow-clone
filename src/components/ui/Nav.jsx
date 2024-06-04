@@ -18,27 +18,9 @@ function Nav() {
 
   return (
     <div className="my-0 w-full bg-white ">
-      <nav className="flex h-14 w-full items-center justify-between border-b-2 px-32 ">
+      <nav className="flex h-14 w-full items-center justify-between gap-2 border-b-2 px-32 ">
         <img className="h-15 w-36 " src={logo} />
-        <NavLink
-          to="/questions"
-          className="mx-3 p-2 text-sm text-slate-500 hover:rounded hover:bg-slate-300"
-        >
-          Questions
-        </NavLink>
-        <NavLink
-          to="/tags"
-          className="mx-3 p-2 text-sm  text-slate-500 hover:rounded hover:bg-slate-300"
-        >
-          Tags
-        </NavLink>
-        <NavLink
-          to="company"
-          className="mx-3 p-2 text-sm  text-slate-500 hover:rounded hover:bg-slate-300"
-        >
-          Companies
-        </NavLink>
-        <form className="relative mx-2 flex-1" onSubmit={handleSubmit}>
+        <form className="relative mx-2 flex w-1/2" onSubmit={handleSubmit}>
           <input
             onFocus={() => setSearchToolTip(true)}
             onBlur={handleOnBlur}
