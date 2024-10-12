@@ -60,7 +60,7 @@ function Nav() {
         </form>
         <NavLink
           className="mx-2 h-7 w-7 rounded-md border bg-slate-600"
-          to="/user/dsjnij/khjbjhb"
+          to="/users/dsjnij/khjbjhb"
         >
           <img className=" object-fill" src={profilePic} />
         </NavLink>

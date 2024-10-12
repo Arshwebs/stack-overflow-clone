@@ -6,7 +6,7 @@ function UserComponent() {
       <img className="h-20 w-20" src={userPic} />
       <div className="flex-col">
         <div className="flex ">
-          <Link to="/" className="">
+          <Link to="/users/id/name" className="">
             <strong>Name</strong>
           </Link>
         </div>

@@ -49,7 +49,7 @@ function Sidebar() {
         <img className="mx-2 h-5 w-5 " src={userIcon} />
 
         <NavLink
-          to="/users"
+          to="/users/all-users"
           className="flex  items-center text-center text-sm focus:font-bold"
         >
           Users

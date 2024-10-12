@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import Company from "../features/company/Company";
 import Ask_Questions from "../features/ask_question/Ask_Questions";
@@ -9,6 +9,7 @@ import Profile from "../features/users/Profile";
 import ErrorPage from "../ui/ErrorPage";
 import Home from "../features/home/Home";
 import AllQuestions from "../features/questions/AllQuestions";
+import AllUsers from "../features/users/AllUsers";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,15 @@ const router = createBrowserRouter([
       { path: "/ask", element: <Ask_Questions /> },
       { path: "/saves", element: <Saves /> },
       { path: "/tags", element: <Tags /> },
-      { path: "/users", element: <Users /> },
-      { path: "/user/:id/:name", element: <Profile /> },
+      {
+        path: "/users",
+        element: <Users />,
+        children: [
+          { element: <Navigate to="/users/all-users" replace />, index: true },
+          { path: "/users/all-users", element: <AllUsers /> },
+          { path: "/users/:id/:name", element: <Profile /> },
+        ],
+      },
     ],
   },
 ]);

@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="m-auto h-full">
       <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools initialIsOpen={true} />
+        <ReactQueryDevtools initialIsOpen={false} />
         <AppLayout />
       </QueryClientProvider>
     </div>
